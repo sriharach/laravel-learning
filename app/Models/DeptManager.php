@@ -17,4 +17,13 @@ class DeptManager extends Model
     public function emp_relate(){
         return $this->hasOne('App\Models\Employee','emp_no'); //ใช้ความสัมพันธ์แบบ 1 to 1 โดยที่ไม่ต้องใช้การ join
     }
+
+    /** manager คือ power กว่าและดึงตาราง Employee และต่อ forest key emp_no */
+
+
+    public function dept_relate(){
+        return $this->belongsTo('App\Models\department','dept_no'); //belongTo ใช้อ้างอิงถึง forrent key
+    }
 }
+
+

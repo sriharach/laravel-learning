@@ -33,6 +33,7 @@ class BasicController extends Controller
         // foreach($emps as $emp){ //วนข้อมูลเพื่อแสดงค่า
         //     echo $emp->fullname." ".$emp->email."<br>";
         // }
+
         return view('pages.employee')->with('emps',$emps); //ตั้งตัวแปร emps และ $empsรับค่ามา
     }
 }
